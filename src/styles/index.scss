@@ -1,0 +1,54 @@
+$font-family-base: 'Merriweather', serif;
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
+$font-family-monospace: 'Nunito Sans', sans-serif;
+$primary: #E6E6E6;
+$danger: #F24822;
+$dark: #222222;
+@mixin desktop{
+    @media (min-width: 769px) {
+        @content;
+    }
+}
+@mixin tablet{
+    @media (min-width: 599px) {
+        @content;
+    }
+}
+$theme-colors: (
+  "primary": $primary,
+  "danger": $danger,
+  "dark": $dark,
+);
+.overlay{
+  position: absolute;
+  z-index: 10;
+  background-color: #00000094;
+}
+.divider-x{
+  text-align: center;
+  margin: 1rem 0;
+  background-color: $danger;
+  width: 50%;
+  height: 2px;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 100px; /* Altura de las filas */
+  grid-gap: 10px; /* Espacio entre elementos */
+}
+
+/* Para filas impares */
+.grid-item:nth-of-type(odd) {
+  grid-column: 1 / -1; /* Elemento ocupa todas las columnas */
+}
+
+/* Para filas pares */
+.grid-item:nth-of-type(even) {
+  grid-column: span 1; /* Elemento ocupa 1 columna */
+}
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito+Sans&display=swap');
+@import './normalize.scss';
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+@import './layout.scss';
+@import './carousel.scss'
