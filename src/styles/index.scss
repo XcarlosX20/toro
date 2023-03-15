@@ -31,6 +31,13 @@ $theme-colors: (
   width: 50%;
   height: 2px;
 }
+#our-work {
+ position: relative;
+ height: 50vh;
+  @include desktop{
+         height: 100vh;  
+    }
+}
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
