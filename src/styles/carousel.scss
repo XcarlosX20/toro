@@ -1,7 +1,7 @@
 $item-width: 100%;
 $item-separation: 0px; 
 $viewer-distance: 700px;
-.carousel {
+.custom-carousel {
   position: relative;
   perspective: $viewer-distance;
   display: flex;
@@ -17,7 +17,7 @@ $viewer-distance: 700px;
     width: $item-width;
     transform-style: preserve-3d;
     transition: transform 0.5s;
-    img {
+    .item-figure,img {
       height: 100%;
       width: 100%;
       box-sizing: border-box;

@@ -19,6 +19,14 @@ $theme-colors: (
   "danger": $danger,
   "dark": $dark,
 );
+$custom-colors: (
+  "gray": #BABABA
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+.bg-redgradient{
+   background: linear-gradient(89.84deg, #BE1F21 0.11%, #E3342D 83.15%);
+}
 .overlay{
   position: absolute;
   z-index: 10;
@@ -31,17 +39,21 @@ $theme-colors: (
   width: 50%;
   height: 2px;
 }
-#our-work {
+section#our-work {
  position: relative;
  height: 50vh;
   @include desktop{
          height: 100vh;  
     }
 }
-.grid-container {
+section#why-us{
+ background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://s3-alpha-sig.figma.com/img/5ed4/720e/97f886a60958ca01e02b0d2fe00164fe?Expires=1679875200&Signature=bEU78aizvoL56oBuBvEJR4pdeBaF~1HN~HwuDA61h88QmX5uUozThFGZ1bODHKztcCuMezEuxPZSkT7gtc6ysAf9Z7ysZESm~oN4dR~KzpGghpyx4bZ9wezIBi2WNevLqIDXJ~wjG7GOKtnJCS8lG~pSq6TtSNkfpkICEmj9Ow-D0GoesFweg2GWYEb~mOMfMtlnH-DsiLuP6RewIWuJYIVvO~7cZBUJeLAtMGMmEzP2gy4akfnOh93aBs4djt0cEGQVtF0AOT4su~R8gCuw8ux7mvOzFp7VIUifX0xZc6BH1vU8DAs2CqhNYPY5lmnJU7kSocS-EkUHRiZpo2MvLw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+}
+.grid-studies-case {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 100px; /* Altura de las filas */
+   width: 100%;
+  height: 100%;
   grid-gap: 10px; /* Espacio entre elementos */
 }
 
