@@ -135,7 +135,7 @@
     <!--OUR WORK-->
     <section id="our-work">
       <img
-        src="./img/fcb615f605526b53ba58d7c47af457bf.jfif"
+        src="./img/fcb615f605526b53ba58d7c47af457bf.jpg"
         class="position-absolute w-100 h-100"
         alt="our-work-img"
       />
@@ -188,15 +188,10 @@
        <p class="text-center text-white">Handrails</p>
       </div>
     </section>
-    <section class="container py-5">
+    <section id="case-studies" class="container py-5">
       <h3 class="text-center text-uppercase pb-3">Case studies</h3>
       <div class="container">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
+      <div id="case-studies-carousel" class="carousel slide" data-bs-ride="true">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="container">
@@ -277,11 +272,16 @@
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <div class="carousel-indicators position-relative">
+        <button type="button" data-bs-target="#case-studies-carousel" data-bs-slide-to="0" class="active bg-dark" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#case-studies-carousel" data-bs-slide-to="1"class="bg-dark" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#case-studies-carousel" data-bs-slide-to="2" class="bg-dark" aria-label="Slide 3"></button>
+      </div>
+      <button class="carousel-control-prev d-none" type="button" data-bs-target="#case-studies-carousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <button class="carousel-control-next d-none" type="button" data-bs-target="#case-studies-carousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
@@ -357,8 +357,8 @@
         </div>
         <div class="col-12 col-md-6 col-lg-6">
           <div class="d-flex flex-column justify-content-center h-100">
-            <div class="d-flex flex-column align-items-start">
-            <p>Toro, a family owned bussines</p>
+            <div class="d-flex flex-column align-items-start p-2">
+            <p class="text-bold"><span class="text-danger fw-bold">Toro</span>, a family owned bussines</p>
             <hr class="divider-x">
             <p>We focus on the required design, we studied the 
             possibilities, what we should do and what not, 
@@ -367,16 +367,51 @@
             client his dream door.</p>
           </div>  
           <div class="row">
-              <div class="col-sm-12 col-md-4 col-lg-4">
-                <div class="btn p-2 bg-redgradient mx-auto">
+              <div class="col-12 col-md-6 col-lg-6">
+               <div class="col-10 col-md-12 col-lg-12 mx-auto">
+                 <div class="btn p-2 bg-redgradient w-100 mx-auto">
                   <p class="m-0 text-center text-white">Follow our journey</p>
                 </div>
+               </div>
               </div>
           </div>
           </div>        
         </div>
         </div>
       </div>
+    </section>
+    <section id="contact-us" class="py-5 bg-redgradient position-relative w-100">
+      <h3 class="text-white text-center text-uppercase pb-3">Contact us</h3>
+      <div class="container contact-content text-white">
+        <h4>Call us for more information 
+          by using our next contacts</h4>
+        <ul class="list-group bg-none list-group-flush">
+          <li class="list-group mb-2">
+            <a class="text-decoration-none" href="tel:(512)-555-0120">
+            <div class="d-flex gap-2 align-items-center h-100">
+            <img src="./img/Vectorphone.svg" alt="mail-icon"/>
+            <p class="m-0">Texas: (512)-555-0120</p>
+          </div>
+          <li class="list-group mb-2">
+            <a class="text-decoration-none" href="mailto:toromws@gmail.com">
+            <div class="d-flex gap-2 align-items-center h-100">
+            <img src="./img/Vectormail.png" alt="mail-icon"/>
+            <p class="m-0">toromws@gmail.com</p>
+          </div>
+           </a>
+          </li>
+          <li class="list-group mb-2">
+            <a class="text-decoration-none" href="#">
+            <div class="d-flex gap-2 align-items-center h-100">
+            <img src="./img/Vectorig.png" alt="mail-icon"/>
+            <p class="m-0">@torometalworksandsteel</p>
+          </div>
+           </a>
+          </li>
+          
+        </ul>
+      </div>
+      <!-- <img class="position-absolute w-75 d-flex justify-content-end" src="https://s3-alpha-sig.figma.com/img/de09/a605/35ad42639725852598564379c47730ec?Expires=1679875200&Signature=g-10jk--ULOccYFVGJUJ~fLLdZKRANpcDC5t08uMYzbAXEKzfc79F0Pcm6C6gcsXxyZycOqdQSJ2upxqhwAaPPRx6PApdYS7ZdMioGOjZAx2dsHOiAR6r4rFy1TFCci20tw2Kff0nlWz1TvWXauF3HYIQ87HghTeaiFJdhlGmdqvmf3d91KOYS7sfMOa7yV6gYmVaBriISA7BLI6YYQB9G7KzoYu13gkZAOJJvy8en3GQFCz-8-~8eCoK1u2qA3iWgx9-jfWBV~0VtUZRsc~33Qh7gi3VGlizGu19D0VGcUfk6SnSY6rZ2CcuMfl2LI~rsrdNcpvA94wmpbiH0oi-Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="toro-back-shadow"> -->
     </section>
     <script>
       //Carousel
