@@ -4,7 +4,7 @@ $font-family-monospace: 'Nunito Sans', sans-serif;
 $primary: #E6E6E6;
 $danger: #F24822;
 $dark: #222222;
-$redGradient: linear-gradient(89.84deg, #BE1F21 0.11%, #E3342D 83.15%);
+$red-background: #BE1F21;
 @mixin desktop{
     @media (min-width: 769px) {
         @content;
@@ -22,7 +22,7 @@ $theme-colors: (
 );
 $custom-colors: (
   "gray": #BABABA,
-  'red-gradient': $redGradient
+  'red-background': $red-background,
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
 .overlay{
@@ -38,28 +38,33 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   height: 2px;
 }
 section#our-work {
- position: relative;
- height: 50vh;
-  @include desktop{
-         height: 100vh;  
-    }
+ background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://res.cloudinary.com/do5yybhwe/image/upload/v1679348747/fcb615f605526b53ba58d7c47af457bf_ocakuu.jpg');  
 }
 section#why-us{
- background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://s3-alpha-sig.figma.com/img/5ed4/720e/97f886a60958ca01e02b0d2fe00164fe?Expires=1679875200&Signature=bEU78aizvoL56oBuBvEJR4pdeBaF~1HN~HwuDA61h88QmX5uUozThFGZ1bODHKztcCuMezEuxPZSkT7gtc6ysAf9Z7ysZESm~oN4dR~KzpGghpyx4bZ9wezIBi2WNevLqIDXJ~wjG7GOKtnJCS8lG~pSq6TtSNkfpkICEmj9Ow-D0GoesFweg2GWYEb~mOMfMtlnH-DsiLuP6RewIWuJYIVvO~7cZBUJeLAtMGMmEzP2gy4akfnOh93aBs4djt0cEGQVtF0AOT4su~R8gCuw8ux7mvOzFp7VIUifX0xZc6BH1vU8DAs2CqhNYPY5lmnJU7kSocS-EkUHRiZpo2MvLw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4');
+ background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://res.cloudinary.com/do5yybhwe/image/upload/v1679348854/97f886a60958ca01e02b0d2fe00164fe_unk7tn.png')
 }
 section#contact-us{
- h3{color: #fff;}img{
+ h3{color: #fff;}
+ img{
   transform: scaleX(-1);
  }
 }
 .contact-content{
   ul{
-    background: #BABABA;
     list-style: none !important;
     padding: 5 !important;
-    li{
-      background-color: #BABABA
-    }
+  }
+}
+body{
+   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+footer{
+  padding: 1.5rem 1rem;
+  margin-top: auto;
+  a{
+    text-decoration: none
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito+Sans&display=swap');

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/dist/index.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
     <title>Toro</title>
   </head>
   <body>
@@ -18,11 +18,11 @@
           />
         </div>
         <nav class="main-navigation animate__animated">
-          <a class="animate__animated" href="#aboutme">Our services</a>
-          <a class="animate__animated" href="#skills">Our work</a>
-          <a class="animate__animated" href="#portfolio">Case studies</a>
-          <a class="animate__animated" href="#contact">Our Story</a>
-          <a class="animate__animated" href="#">Contact us</a>
+          <a class="animate__animated" href="#our-service">Our services</a>
+          <a class="animate__animated" href="#our-work">Our work</a>
+          <a class="animate__animated" href="#case-studies">Case studies</a>
+          <a class="animate__animated" href="#our-story">Our Story</a>
+          <a class="animate__animated" href="#contact-us">Contact us</a>
           <a class="animate__animated" href="#">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,24 +41,35 @@
         <div class="btn-burguer-container" id="btn-burguer-container">
           <div class="btn-burguer" id="btn-burguer"></div>
         </div>
-        <div class="cont-main hidden" id="main">
-          <ul>
+        <div class="cont-main hidden bg-dark" id="menu-mobile">
+          <div class="container">
+            <div class="row pt-3">
+              <div class="col-2">
+              <div class="container mx-auto">
+                <img src="./img/left-carousel.svg" id="main-item" class="w-100" alt="left-arrow-menu">
+              </div>
+              </div>
+              <div class="col-10">
+                <ul>
             <li id="main-item">
-              <a class="animate__animated" href="#aboutme">Our services</a>
+              <a class="animate__animated" href="#our-service">Our services</a>
             </li>
             <li id="main-item">
-              <a class="animate__animated" href="#skills">Our work</a>
+              <a class="animate__animated" href="#our-work">Our work</a>
             </li>
             <li id="main-item">
-              <a class="animate__animated" href="#portfolio">Case studies</a>
+              <a class="animate__animated" href="#case-studies">Case studies</a>
             </li>
             <li id="main-item">
-              <a class="animate__animated" href="#contact">Our Story</a>
+              <a class="animate__animated" href="#our-story">Our Story</a>
             </li>
             <li id="main-item">
-              <a class="animate__animated" href="#contact">Contact us</a>
+              <a class="animate__animated" href="#contact-us">Contact us</a>
             </li>
           </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -71,8 +82,8 @@
         </h3>
       </div>
       <img
-        class="h-100 w-100"
-        src="/dist/img/85a67b14338f9dbe8d599de8015b058f.jfif"
+        class="h-100 w-100 object-fit-cover"
+        src="./img/85a67b14338f9dbe8d599de8015b058f.jfif"
         alt="person"
       />
       <div
@@ -88,7 +99,7 @@
       </div>
     </div>
     <!--OUR SERVICE-->
-    <section class="container-fluid py-5 bg-primary">
+    <section id="our-service" class="container-fluid py-5 bg-primary">
       <h3 class="text-center text-uppercase pb-3">Our service</h3>
       <div class="container">
         <div class="row">
@@ -134,12 +145,7 @@
     </section>
     <!--OUR WORK-->
     <section id="our-work">
-      <img
-        src="./img/fcb615f605526b53ba58d7c47af457bf.jpg"
-        class="position-absolute w-100 h-100"
-        alt="our-work-img"
-      />
-      <div class="overlay d-flex flex-column justify-content-center py-4 w-100 h-100 gap-2">
+      <div class="d-flex flex-column justify-content-center py-4 w-100 h-100 gap-2">
         <h3 class="text-center text-uppercase text-white">Our work</h3>
         <div class="container">
           <div class="row">
@@ -155,7 +161,7 @@
                     alt=""
                   />
                   <img
-                    src="./img/711528b4c73542ad564f6460a2e25db2.jfif"
+                    src="./img/711528b4c73542ad564f6460a2e25db2.jpg"
                     alt=""
                   />
                   
@@ -168,7 +174,7 @@
                     alt=""
                   />
                   <img
-                    src="./img/711528b4c73542ad564f6460a2e25db2.jfif"
+                    src="./img/711528b4c73542ad564f6460a2e25db2.jpg"
                     alt=""
                   />
                 </figure>
@@ -184,14 +190,14 @@
             </div>
           </div>
         </div>
+         <p class="text-center text-white">Handrails</p>
       </div>
-       <p class="text-center text-white">Handrails</p>
       </div>
     </section>
     <section id="case-studies" class="container py-5">
       <h3 class="text-center text-uppercase pb-3">Case studies</h3>
       <div class="container">
-      <div id="case-studies-carousel" class="carousel slide" data-bs-ride="true">
+      <div id="case-studies-carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="container">
@@ -287,7 +293,7 @@
       </button>
     </div>
     <div class="container d-flex justify-content-center w-100">
-      <div class="btn btn-danger d-flex flex-column justify-content-center my-3 bg-redgradient">
+      <div class="btn-red-background btn d-flex flex-column justify-content-center my-3">
         <p class="text-center text-white m-0">Schedule a free consultation &#8594;</p>
       </div>
     </div>
@@ -353,12 +359,12 @@
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-6 col-lg-6">
-          <img loading="lazy" class="img-fluid" src="https://s3-alpha-sig.figma.com/img/775d/2348/c59a59370cd2e7a052401b0bb80fea02?Expires=1679875200&Signature=UR26u-j70d64bFV9T9FeGjyU0-e7J-bvkr2Q9IQE5LOHSpTSedbWjptTn5EZLRX75Gr5OEbdWR4MsM8F4BfLpql5uu9PBe2oJa9WXP3Rk9zzLufCCkDzlA3TGd-x2~3kcVOq-Ezzb438we5LgT3gmfauFmKc7fAzrx-fe0YqA6IS0eOe~mzSoIC8PdtTFKUm99Yo~LnIIABUZ-S1izssLnFrODjJ5Oe0zgV0c9NSRUHR6buJVGKiNXYV~VXrOlwVAeEycE1Tb8EqXG-GtgiLYxvXcK2uj7vsd3BtgyaBy~J37rrUM2HYJsPV0R~KF6Z56UqJvwwHxzw7mnB8Zjqopw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="our-story">
+          <img loading="lazy" class="img-fluid" src="./img/c59a59370cd2e7a052401b0bb80fea02.png" alt="our-story">
         </div>
         <div class="col-12 col-md-6 col-lg-6">
           <div class="d-flex flex-column justify-content-center h-100">
             <div class="d-flex flex-column align-items-start p-2">
-            <p class="text-bold"><span class="text-danger fw-bold">Toro</span>, a family owned bussines</p>
+            <p class="fw-bold"><span class="text-danger">Toro</span>, a family owned bussines</p>
             <hr class="divider-x">
             <p>We focus on the required design, we studied the 
             possibilities, what we should do and what not, 
@@ -369,7 +375,7 @@
           <div class="row">
               <div class="col-12 col-md-6 col-lg-6">
                <div class="col-10 col-md-12 col-lg-12 mx-auto">
-                 <div class="btn p-2 bg-redgradient w-100 mx-auto">
+                 <div class="btn-red-background btn p-2 w-100 mx-auto">
                   <p class="m-0 text-center text-white">Follow our journey</p>
                 </div>
                </div>
@@ -380,12 +386,13 @@
         </div>
       </div>
     </section>
-    <section id="contact-us" class="py-5 bg-redgradient position-relative w-100">
+    <section id="contact-us" class="py-5 bg-red-background bg-gradient position-relative w-100">
+      
       <h3 class="text-white text-center text-uppercase pb-3">Contact us</h3>
       <div class="container contact-content text-white">
         <h4>Call us for more information 
           by using our next contacts</h4>
-        <ul class="list-group bg-none list-group-flush">
+        <ul class="list-group list-group-flush">
           <li class="list-group mb-2">
             <a class="text-decoration-none" href="tel:(512)-555-0120">
             <div class="d-flex gap-2 align-items-center h-100">
@@ -413,59 +420,17 @@
       </div>
       <!-- <img class="position-absolute w-75 d-flex justify-content-end" src="https://s3-alpha-sig.figma.com/img/de09/a605/35ad42639725852598564379c47730ec?Expires=1679875200&Signature=g-10jk--ULOccYFVGJUJ~fLLdZKRANpcDC5t08uMYzbAXEKzfc79F0Pcm6C6gcsXxyZycOqdQSJ2upxqhwAaPPRx6PApdYS7ZdMioGOjZAx2dsHOiAR6r4rFy1TFCci20tw2Kff0nlWz1TvWXauF3HYIQ87HghTeaiFJdhlGmdqvmf3d91KOYS7sfMOa7yV6gYmVaBriISA7BLI6YYQB9G7KzoYu13gkZAOJJvy8en3GQFCz-8-~8eCoK1u2qA3iWgx9-jfWBV~0VtUZRsc~33Qh7gi3VGlizGu19D0VGcUfk6SnSY6rZ2CcuMfl2LI~rsrdNcpvA94wmpbiH0oi-Q__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4" alt="toro-back-shadow"> -->
     </section>
-    <script>
-      //Carousel
-      window.addEventListener("DOMContentLoaded", () => {
-        var carousel = document.querySelector(".custom-carousel");
-        showCarousel(carousel);
-        function showCarousel(root) {
-          var figure = root.querySelector("figure"),
-            nav = root.querySelector(".carousel-buttons"),
-            images = figure.children,
-            n = images.length,
-            gap = root.dataset.gap || 0,
-            bfc = "bfc" in root.dataset,
-            theta = (2 * Math.PI) / n,
-            currImage = 0;
-          setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
-          window.addEventListener("resize", () => {
-            setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
-          });
-          setupNavigation();
-
-          function setupCarousel(n, s) {
-            var apothem = s / (2 * Math.tan(Math.PI / n));
-            figure.style.transformOrigin = `50% 50% ${-apothem}px`;
-
-            for (var i = 0; i < n; i++) images[i].style.padding = `${gap}px`;
-            for (i = 1; i < n; i++) {
-              images[i].style.transformOrigin = `50% 50% ${-apothem}px`;
-              images[i].style.transform = `rotateY(${i * theta}rad)`;
-            }
-            if (bfc)
-              for (i = 0; i < n; i++)
-                images[i].style.backfaceVisibility = "hidden";
-
-            figure.style.transform = `rotateY(${currImage * -theta}rad)`;
-          }
-
-          function setupNavigation() {
-            const prev = document
-              .querySelector(".prev")
-              .addEventListener("click", () => {
-                currImage--;
-                figure.style.transform = `rotateY(${currImage * -theta}rad)`;
-              });
-            const next = document
-              .querySelector(".next")
-              .addEventListener("click", () => {
-                currImage++;
-                figure.style.transform = `rotateY(${currImage * -theta}rad)`;
-              });
-          }
-        }
-      });
-    </script>
+    <footer class="bg-dark">
+      <div class="container text-white">
+       <p class="text-center text-white lh-lg"> Content, including images, displayed on this website is protected by copyright laws. Downloading, replication,
+ retransmission or reproduction of content on this website is strictly prohibited.  
+ <a class="text-danger fw-bold ml-2" href="#">Terms of Use</a> |
+ <a class="text-danger fw-bold" href="#">Privacy Policy</a> | 
+ <a class="text-danger fw-bold" href="#">Areas Served</a> |
+</p>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
