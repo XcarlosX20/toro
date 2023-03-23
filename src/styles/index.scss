@@ -4,7 +4,6 @@ $font-family-monospace: 'Nunito Sans', sans-serif;
 $primary: #E6E6E6;
 $danger: #F24822;
 $dark: #222222;
-$red-background: #BE1F21;
 @mixin desktop{
     @media (min-width: 769px) {
         @content;
@@ -21,10 +20,13 @@ $theme-colors: (
   "dark": $dark,
 );
 $custom-colors: (
-  "gray": #BABABA,
-  'red-background': $red-background,
+  "gray": #BABABA
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
+.bg-red-background{
+  background: linear-gradient(89.84deg, #BE1F21 0.11%, #E3342D 83.15%);
+
+}
 .overlay{
   position: absolute;
   z-index: 10;
@@ -33,12 +35,26 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 .divider-x{
   text-align: center;
   margin: 1rem 0;
+  color: transparent;
   background-color: $danger;
   width: 50%;
-  height: 2px;
+  height: 1px;
+  opacity: 1;
+}
+.img-hero{
+  object-fit: none;
+  width: auto;
+  height: 100%;
+
+  @include desktop{
+    width: inherit;
+    height: inherit;
+    object-fit: fill;
+  }
 }
 section#our-work {
- background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://res.cloudinary.com/do5yybhwe/image/upload/v1679348747/fcb615f605526b53ba58d7c47af457bf_ocakuu.jpg');  
+  
+ background-image:linear-gradient(rgba(1, 4, 6, 0.9),rgba(1, 4, 6, 0.9)),url('https://res.cloudinary.com/do5yybhwe/image/upload/v1679348747/fcb615f605526b53ba58d7c47af457bf_ocakuu.jpg');  
 }
 section#why-us{
  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://res.cloudinary.com/do5yybhwe/image/upload/v1679348854/97f886a60958ca01e02b0d2fe00164fe_unk7tn.png')

@@ -1,4 +1,3 @@
-const bootstrap = require("bootstrap/dist/js/bootstrap");
 const nav = document.querySelector(".main-navigation");
 const links = document.querySelectorAll("nav a");
 const main = document.querySelector("#menu-mobile");
