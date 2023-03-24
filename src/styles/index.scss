@@ -24,6 +24,16 @@ $custom-colors: (
   'black': #000202
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
+body{
+  font-size: 0.87rem !important;
+   display: flex;
+  flex-direction: column;
+  font-family: 'Nunito Sans';
+  min-height: 100vh;
+  @include desktop{
+    font-size: 1.25rem !important;
+  }
+}
 h1, h2, h3, h4, h5 {
   font-family: 'Merriweather';
 }
@@ -69,34 +79,31 @@ section#contact-us{
  .bg-toro-img{
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: end;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
-  overflow: hidden;
-  img{
-  position: relative;
- filter: brightness(110%);
--webkit-filter: brightness(110%);
--moz-filter: brightness(110%);
-
-  width: 120%;
-  height: auto;
-  top: 25%;
-  right: -30%;
-  bottom: 0;
-  left: 0;
-  transform: scaleX(-1);
-  @include desktop{
-    width: 65%;
-    height: 120%;
-    top: 0;
-    right: 0;
+   display: flex; 
+   justify-content: flex-end;
+   align-items: flex-end;
+  img {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+    -moz-filter: brightness(110%);
+      max-width: 100%;
+      height: 100%;
   }
-  //transform: scaleX(-1) translate(-20%, -4%);
+  .bg-toro-img-mobile{
+    @include desktop{
+      display: none;
+    }
+  }
+   .bg-toro-img-desktop{
+    display: none;
+    @include desktop{
+      display: block;
+    }
   }
  }
 }
@@ -113,23 +120,6 @@ section#contact-us{
   }
   li, a{
     color: #fff;
-  }
-}
-body{
-  font-size: 0.87rem !important;
-   display: flex;
-  flex-direction: column;
-  font-family: 'Nunito Sans';
-  min-height: 100vh;
-  @include desktop{
-    font-size: 1.25rem !important;
-  }
-}
-footer{
-  padding: 1.5rem 1rem;
-  margin-top: auto;
-  a{
-    text-decoration: none
   }
 }
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Nunito+Sans&display=swap');
