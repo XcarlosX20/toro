@@ -1,7 +1,7 @@
-$font-family-base: 'Merriweather', serif;
-$font-family-sans-serif: 'Nunito Sans', sans-serif;
+$font-family-base: 'Nunito Sans', sans-serif;
+$font-family-sans-serif: 'Merriweather', serif;
 $font-family-monospace: 'Nunito Sans', sans-serif;
-$primary: #E6E6E6;
+$primary: #D9D9D9;
 $danger: #F24822;
 $dark: #222222;
 @mixin desktop{
@@ -20,12 +20,18 @@ $theme-colors: (
   "dark": $dark,
 );
 $custom-colors: (
-  "gray": #BABABA
+  "gray": #BABABA,
+  'black': #000202
 );
 $theme-colors: map-merge($theme-colors, $custom-colors);
-.bg-red-background{
+h1, h2, h3, h4, h5 {
+  font-family: 'Merriweather';
+}
+.font-heading{
+   font-family: 'Merriweather';
+}
+.bg-red-background {
   background: linear-gradient(89.84deg, #BE1F21 0.11%, #E3342D 83.15%);
-
 }
 .overlay{
   position: absolute;
@@ -45,7 +51,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
   object-fit: none;
   width: auto;
   height: 100%;
-
   @include desktop{
     width: inherit;
     height: inherit;
@@ -60,21 +65,65 @@ section#why-us{
  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url('https://res.cloudinary.com/do5yybhwe/image/upload/v1679348854/97f886a60958ca01e02b0d2fe00164fe_unk7tn.png')
 }
 section#contact-us{
- h3{color: #fff;}
- img{
+ position: relative;
+ .bg-toro-img{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  img{
+  position: relative;
+ filter: brightness(110%);
+-webkit-filter: brightness(110%);
+-moz-filter: brightness(110%);
+
+  width: 120%;
+  height: auto;
+  top: 25%;
+  right: -30%;
+  bottom: 0;
+  left: 0;
   transform: scaleX(-1);
+  @include desktop{
+    width: 65%;
+    height: 120%;
+    top: 0;
+    right: 0;
+  }
+  //transform: scaleX(-1) translate(-20%, -4%);
+  }
  }
 }
 .contact-content{
+  position: relative;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  
+  h3{color: #fff;}
   ul{
     list-style: none !important;
     padding: 5 !important;
   }
+  li, a{
+    color: #fff;
+  }
 }
 body{
+  font-size: 0.87rem !important;
    display: flex;
   flex-direction: column;
+  font-family: 'Nunito Sans';
   min-height: 100vh;
+  @include desktop{
+    font-size: 1.25rem !important;
+  }
 }
 footer{
   padding: 1.5rem 1rem;

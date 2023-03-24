@@ -18,12 +18,12 @@
     }
 }
 .main-navigation{
-    font-weight: 600;
     display: none;
     @include desktop{
         width: 100%;
         display: flex;
-        justify-content: space-around;
+        gap: 5px;
+        justify-content: space-evenly;
     }
     
     a{ 
@@ -77,7 +77,7 @@
 
 
 .hidden{
-    transform: translate(-768px);
+    transform: translate(768px);
 }
 .btn-burguer-container {    
     @include desktop{
